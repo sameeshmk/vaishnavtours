@@ -1,0 +1,136 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 16px;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('assets/images/houseboat.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 25px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #004d40;
+}
+
+/* About Section */
+.about ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about li {
+    background: white;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid #004d40;
+    border-radius: 4px;
+}
+
+/* Packages Section */
+.package-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.package-item {
+    background: white;
+    padding: 20px;
+    width: 260px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.package-item h3 {
+    margin-bottom: 10px;
+    color: #00796b;
+}
+
+/* Contact Section */
+.contact p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.contact .btn {
+    display: block;
+    width: 220px;
+    margin: 20px auto 0;
+}
+
+/* Footer */
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
