@@ -1,83 +1,190 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaishnav Tours & Travels – Kerala Houseboat Stays</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+/* ------------------------------
+   GLOBAL RESET & BASE STYLES
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <img src="assets/images/hero.jpg" alt="Kerala Houseboat">
-        <div class="hero-text">
-            <h1>Experience Luxury Kerala Houseboat Stays</h1>
-            <p>Premium, Deluxe & Luxury Houseboats in Alleppey</p>
-        </div>
-    </section>
+/* ------------------------------
+   HERO SECTION
+--------------------------------*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
 
-    <!-- PACKAGES SECTION -->
-    <h2 class="section-title">Our Houseboat Packages</h2>
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
 
-    <section class="packages">
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
 
-        <div class="package-card">
-            <img src="assets/images/houseboat1.jpg" alt="Premium Houseboat">
-            <div class="package-content">
-                <h3>Premium Houseboat</h3>
-                <p>Ideal for families and couples seeking comfort with scenic backwater views.</p>
-            </div>
-        </div>
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
 
-        <div class="package-card">
-            <img src="assets/images/houseboat2.jpg" alt="Luxury Houseboat">
-            <div class="package-content">
-                <h3>Luxury Houseboat</h3>
-                <p>Spacious interiors, AC rooms, and top‑tier amenities for a luxury experience.</p>
-            </div>
-        </div>
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
 
-        <div class="package-card">
-            <img src="assets/images/houseboat3.jpg" alt="Deluxe Houseboat">
-            <div class="package-content">
-                <h3>Deluxe Houseboat</h3>
-                <p>Perfect for budget travelers who want comfort and beautiful backwater cruising.</p>
-            </div>
-        </div>
+/* ------------------------------
+   SECTION HEADINGS
+--------------------------------*/
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
 
-    </section>
+/* ------------------------------
+   PACKAGES SECTION
+--------------------------------*/
+.packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
 
-    <!-- INTERIOR SECTION -->
-    <section class="interior">
-        <img src="assets/images/interior.jpg" alt="Houseboat Interior">
-        <div class="interior-text">
-            <h2>Beautiful Interiors</h2>
-            <p>
-                Our houseboats feature elegant wooden interiors, comfortable bedrooms, 
-                clean bathrooms, and spacious dining areas. Enjoy peaceful cruising 
-                through the Alleppey backwaters with delicious Kerala cuisine.
-            </p>
-        </div>
-    </section>
+.package-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
 
-    <!-- WHY CHOOSE US -->
-    <section class="why-us">
-        <h2 class="section-title">Why Choose Us</h2>
+.package-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
 
-        <div class="why-us-list">
-            <div class="why-us-item">✔ Professional Service</div>
-            <div class="why-us-item">✔ Clean & Safe Boats</div>
-            <div class="why-us-item">✔ Experienced Crew</div>
-            <div class="why-us-item">✔ Best Rates Guaranteed</div>
-        </div>
-    </section>
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2024 Vaishnav Tours & Travels – Kerala Houseboat Stays</p>
-    </footer>
+.package-content {
+    padding: 20px;
+}
 
-</body>
-</html>
+.package-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.package-content p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ------------------------------
+   INTERIOR SECTION
+--------------------------------*/
+.interior {
+    display: flex;
+    gap: 30px;
+    padding: 40px 20px;
+    align-items: center;
+}
+
+.interior img {
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.interior-text {
+    width: 50%;
+}
+
+.interior-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.interior-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ------------------------------
+   WHY CHOOSE US
+--------------------------------*/
+.why-us {
+    background: #fff;
+    padding: 40px 20px;
+}
+
+.why-us-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.why-us-item {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ------------------------------
+   RESPONSIVE FIXES
+--------------------------------*/
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .interior {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .interior img,
+    .interior-text {
+        width: 100%;
+    }
+}
