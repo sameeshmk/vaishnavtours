@@ -1,6 +1,4 @@
-/* ------------------------------
-   GLOBAL RESET & BASE STYLES
---------------------------------*/
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -8,19 +6,52 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
 }
 
-/* ------------------------------
-   HERO SECTION
---------------------------------*/
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+}
+
+/* HERO SECTION */
 .hero {
     position: relative;
-    width: 100%;
-    height: 85vh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -28,7 +59,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(70%);
+    filter: brightness(50%);
 }
 
 .hero-text {
@@ -37,177 +68,189 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff;
+    color: white;
+    width: 90%;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 20px;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: 1.7rem;
+    margin-bottom: 30px;
 }
 
-/* ------------------------------
-   SECTION HEADINGS
---------------------------------*/
+/* BUTTONS */
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.btn,
+.btn-whatsapp {
+    display: inline-block;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.btn {
+    background: #ff9800;
+    color: white;
+}
+
+.btn:hover {
+    background: #e68900;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.btn-whatsapp:hover {
+    background: #1eb955;
+}
+
+/* SECTION TITLE */
 .section-title {
     text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-    margin: 40px 0 20px;
+    font-size: 3rem;
+    margin: 80px 0 50px;
+    color: #222;
 }
 
-/* ------------------------------
-   PACKAGES SECTION
---------------------------------*/
+/* PACKAGE SECTION */
 .packages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 40px 80px;
+    flex-wrap: wrap;
 }
 
 .package-card {
-    background: #fff;
-    border-radius: 12px;
+    width: 380px;
+    background: white;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
 .package-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
 }
 
 .package-card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
-.package-content {
-    padding: 20px;
-}
-
-.package-content h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.package-content p {
-    font-size: 0.95rem;
-    color: #555;
-}
-
-/* ------------------------------
-   INTERIOR SECTION
---------------------------------*/
-.interior {
-    display: flex;
-    gap: 30px;
-    padding: 40px 20px;
-    align-items: center;
-}
-
-.interior img {
-    width: 50%;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.interior-text {
-    width: 50%;
-}
-
-.interior-text h2 {
+.package-card h3 {
     font-size: 2rem;
-    margin-bottom: 15px;
+    padding: 20px 25px 10px;
 }
 
-.interior-text p {
-    font-size: 1rem;
-    color: #555;
+.package-card p {
+    padding: 0 25px 20px;
+    font-size: 1.1rem;
 }
 
-/* ------------------------------
-   WHY CHOOSE US
---------------------------------*/
-.why-us {
-    background: #fff;
-    padding: 40px 20px;
+/* BOOK BUTTON IN CARD */
+.package-btn {
+    display: inline-block;
+    margin: 0 25px 25px;
+    background: #ff9800;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.why-us-list {
+.package-btn:hover {
+    background: #e68900;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     gap: 20px;
-}
-
-.why-us-item {
-    background: #f1f1f1;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 1rem;
-}
-
-/* ------------------------------
-   FOOTER
---------------------------------*/
-footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
     margin-top: 40px;
 }
 
-/* ------------------------------
-   RESPONSIVE FIXES
---------------------------------*/
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CONTACT SECTION */
+.contact {
+    background: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero-text p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
-    .interior {
-        flex-direction: column;
-        text-align: center;
+    .section-title {
+        font-size: 2rem;
     }
 
-    .interior img,
-    .interior-text {
+    .package-card {
         width: 100%;
     }
-}
-/* Floating WhatsApp Button */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25D366;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 32px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform .3s ease;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
 }
