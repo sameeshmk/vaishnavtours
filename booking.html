@@ -38,6 +38,7 @@
             border-radius: 8px;
             border: 1px solid #ccc;
             font-size: 1rem;
+            box-sizing: border-box;
         }
 
         .booking-form textarea {
@@ -60,6 +61,11 @@
         .booking-form button:hover {
             background: #0056b3;
         }
+
+        .booking-form button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 
@@ -68,36 +74,31 @@
     <div class="booking-container">
         <h2>Houseboat Booking Form</h2>
 
-        <form class="booking-form">
-
+        <form class="booking-form" id="bookingForm">
             <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="Enter your full name" required>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
 
             <label for="date">Booking Date</label>
-            <input type="date" id="date" required>
+            <input type="date" id="date" name="booking_date" required>
 
             <label for="package">Select Package</label>
-            <select id="package" required>
+            <select id="package" name="package" required>
                 <option value="">Choose a package</option>
-                <option value="premium">Premium Houseboat – ₹8,500</option>
-                <option value="luxury">Luxury Houseboat – ₹12,500</option>
-                <option value="deluxe">Deluxe Houseboat – ₹6,500</option>
+                <option value="Premium Houseboat – ₹8,500">Premium Houseboat – ₹8,500</option>
+                <option value="Luxury Houseboat – ₹12,500">Luxury Houseboat – ₹12,500</option>
+                <option value="Deluxe Houseboat – ₹6,500">Deluxe Houseboat – ₹6,500</option>
             </select>
 
             <label for="message">Additional Notes</label>
-            <textarea id="message" placeholder="Any special requests?"></textarea>
+            <textarea id="message" name="message" placeholder="Any special requests?"></textarea>
 
-            <button type="submit">Submit Booking</button>
+            <button type="submit" id="submitButton">Submit Booking</button>
         </form>
     </div>
 
-    <footer>
-        <p>© 2024 Vaishnav Tours & Travels – Kerala Houseboat Stays</p>
-    </footer>
-    <!-- FOOTER -->
     <footer>
         <p>© 2024 Vaishnav Tours & Travels – Kerala Houseboat Stays</p>
     </footer>
@@ -107,8 +108,53 @@
         🟢
     </a>
 
-</body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const supabaseUrl = 'https://gdrldlecacrkmpqorhcp.supabase.co';
+        const supabaseAnonKey = 'sb_publishable_ADbNoL-EOSd52Nui570phA_kfhF9Xnb';
+
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
+
+        const bookingForm = document.getElementById('bookingForm');
+        const submitButton = document.getElementById('submitButton');
+
+        bookingForm.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                booking_date: document.getElementById('date').value,
+                package: document.getElementById('package').value,
+                message: document.getElementById('message').value.trim()
+            };
+
+            if (!formData.name || !formData.phone || !formData.booking_date || !formData.package) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+
+            const { data, error } = await supabase
+                .from('enquiries')
+                .insert([formData]);
+
+            if (error) {
+                console.error('Supabase insert error:', error);
+                alert('Booking failed. Please try again or contact support.');
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit Booking';
+                return;
+            }
+
+            alert('Your booking request has been submitted successfully!');
+            bookingForm.reset();
+            submitButton.disabled = false;
+            submitButton.textContent = 'Submit Booking';
+        });
+    </script>
 
 </body>
 </html>
