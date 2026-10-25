@@ -37,25 +37,4 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     });
   });
-
-  const form = document.getElementById('bookingForm');
-  if (form) {
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const button = form.querySelector('.form-submit');
-      if (!button) return;
-
-      const originalText = button.textContent;
-      button.textContent = 'Request sent';
-      button.disabled = true;
-      button.style.opacity = '0.8';
-
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.disabled = false;
-        button.style.opacity = '1';
-        form.reset();
-      }, 1800);
-    });
-  }
 });

@@ -192,58 +192,67 @@
             </div>
           </div>
 
-          <form class="booking-form" id="bookingForm">
+          <form
+            class="booking-form"
+            id="bookingForm"
+            action="https://formsubmit.co/sameeshmk@gmail.com"
+            method="POST"
+            accept-charset="UTF-8"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New enquiry from Vaishnav Tours" />
+
             <div class="input-row two-col">
               <label>
                 Full name
-                <input type="text" placeholder="Your name" />
+                <input type="text" name="name" placeholder="Your name" required />
               </label>
               <label>
                 Phone
-                <input type="tel" placeholder="Mobile number" />
+                <input type="tel" name="phone" placeholder="Mobile number" required />
               </label>
             </div>
 
             <div class="input-row two-col">
               <label>
                 Package
-                <select>
-                  <option>Premium Houseboat</option>
-                  <option>Luxury Houseboat</option>
-                  <option>Deluxe Houseboat</option>
-                  <option>Custom Holiday Package</option>
+                <select name="package" required>
+                  <option value="Premium Houseboat">Premium Houseboat</option>
+                  <option value="Luxury Houseboat">Luxury Houseboat</option>
+                  <option value="Deluxe Houseboat">Deluxe Houseboat</option>
+                  <option value="Custom Holiday Package">Custom Holiday Package</option>
                 </select>
               </label>
               <label>
                 Travel date
-                <input type="date" />
+                <input type="date" name="travel_date" />
               </label>
             </div>
 
             <div class="input-row two-col">
               <label>
                 Guests
-                <select>
-                  <option>2 Guests</option>
-                  <option>4 Guests</option>
-                  <option>6 Guests</option>
-                  <option>Custom</option>
+                <select name="guests">
+                  <option value="2 Guests">2 Guests</option>
+                  <option value="4 Guests">4 Guests</option>
+                  <option value="6 Guests">6 Guests</option>
+                  <option value="Custom">Custom</option>
                 </select>
               </label>
               <label>
                 Budget
-                <select>
-                  <option>₹5k - ₹8k</option>
-                  <option>₹8k - ₹12k</option>
-                  <option>₹12k - ₹20k</option>
-                  <option>Custom</option>
+                <select name="budget">
+                  <option value="₹5k - ₹8k">₹5k - ₹8k</option>
+                  <option value="₹8k - ₹12k">₹8k - ₹12k</option>
+                  <option value="₹12k - ₹20k">₹12k - ₹20k</option>
+                  <option value="Custom">Custom</option>
                 </select>
               </label>
             </div>
 
             <label>
               Additional details
-              <textarea rows="4" placeholder="Tell us about your preferred stay, meals, or custom route..."></textarea>
+              <textarea name="message" rows="4" placeholder="Tell us about your preferred stay, meals, or custom route..."></textarea>
             </label>
 
             <button class="primary-btn form-submit" type="submit">Send enquiry</button>
