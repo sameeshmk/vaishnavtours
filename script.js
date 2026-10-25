@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
       chip.classList.add('active');
 
       const filter = chip.dataset.filter;
-
       cards.forEach((card) => {
         const matches = filter === 'all' || card.dataset.category.includes(filter);
         card.classList.toggle('hidden', !matches);
@@ -30,6 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   revealItems.forEach((item) => revealObserver.observe(item));
+
+  const navLinks = document.querySelectorAll('.nav-item');
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.forEach((item) => item.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
 
   const form = document.getElementById('bookingForm');
   if (form) {
