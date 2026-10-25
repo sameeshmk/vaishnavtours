@@ -1,95 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaishnav Tours & Travels – Kerala Houseboat Stays</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaishnav Tours & Travels</title>
+    <meta
+      name="description"
+      content="Luxury Kerala houseboat stays, holiday packages, honeymoon trips, and South India tours."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
 
-<body>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <img src="assets/images/hero.jpg" alt="Kerala Houseboat">
-        <div class="hero-text">
-            <h1>Experience Luxury Kerala Houseboat Stays</h1>
-            <p>Premium, Deluxe & Luxury Houseboats in Alleppey</p>
-        </div>
-    </section>
-
-    <!-- PACKAGES SECTION -->
-    <h2 class="section-title">Our Houseboat Packages</h2>
-
-    <section class="packages">
-
-        <div class="package-card">
-            <img src="assets/images/houseboat1.jpg" alt="Premium Houseboat">
-            <div class="package-content">
-                <h3>Premium Houseboat</h3>
-                <p>Ideal for families and couples seeking comfort with scenic backwater views.</p>
-            </div>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">V</div>
+          <div class="brand-copy">
+            <span class="eyebrow">Vaishnav</span>
+            <h1>Tours</h1>
+          </div>
         </div>
 
-        <div class="package-card">
-            <img src="assets/images/houseboat2.jpg" alt="Luxury Houseboat">
-            <div class="package-content">
-                <h3>Luxury Houseboat</h3>
-                <p>Spacious interiors, AC rooms, and top‑tier amenities for a luxury experience.</p>
-            </div>
+        <div class="topbar-actions">
+          <a class="icon-btn" href="tel:+919995954739" aria-label="Call now">☎</a>
+          <a
+            class="icon-btn whatsapp"
+            href="https://wa.me/00919995954739"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Chat on WhatsApp"
+            >✆</a
+          >
         </div>
+      </header>
 
-        <div class="package-card">
-            <img src="assets/images/houseboat3.jpg" alt="Deluxe Houseboat">
-            <div class="package-content">
-                <h3>Deluxe Houseboat</h3>
-                <p>Perfect for budget travelers who want comfort and beautiful backwater cruising.</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- INTERIOR SECTION -->
-    <section class="interior">
-        <img src="assets/images/interior.jpg" alt="Houseboat Interior">
-        <div class="interior-text">
-            <h2>Beautiful Interiors</h2>
+      <main class="content">
+        <section class="hero" id="home">
+          <div class="hero-media">
+            <img src="assets/images/hero.jpg" alt="Kerala houseboat in backwaters" />
+          </div>
+          <div class="hero-overlay"></div>
+          <div class="hero-copy">
+            <span class="badge">Luxury Kerala Houseboat Stay</span>
+            <h2>Experience the calm of the backwaters</h2>
             <p>
-                Our houseboats feature elegant wooden interiors, comfortable bedrooms, 
-                clean bathrooms, and spacious dining areas. Enjoy peaceful cruising 
-                through the Alleppey backwaters with delicious Kerala cuisine.
+              Premium, Deluxe & Luxury houseboats in Alleppey with curated
+              family, couple and group holiday experiences.
             </p>
+
+            <div class="cta-row">
+              <a class="primary-btn" href="#booking">Book now</a>
+              <a class="secondary-btn" href="#packages">Explore</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Highlights">
+          <article class="stat-card">
+            <strong>50+</strong>
+            <span>Premium stays</span>
+          </article>
+          <article class="stat-card">
+            <strong>4.9/5</strong>
+            <span>Guest rating</span>
+          </article>
+          <article class="stat-card">
+            <strong>24/7</strong>
+            <span>Travel support</span>
+          </article>
+        </section>
+
+        <section class="section-block" id="packages">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow dark">Popular stays</span>
+              <h3>Houseboat packages</h3>
+            </div>
+            <a href="#booking">Custom quote</a>
+          </div>
+
+          <div class="chip-row" aria-label="Package filters">
+            <button class="chip active" data-filter="all" type="button">All</button>
+            <button class="chip" data-filter="family" type="button">Family</button>
+            <button class="chip" data-filter="premium" type="button">Premium</button>
+            <button class="chip" data-filter="luxury" type="button">Luxury</button>
+            <button class="chip" data-filter="honeymoon" type="button">Honeymoon</button>
+          </div>
+
+          <div class="card-grid packages-grid">
+            <article class="package-card" data-category="premium family">
+              <img src="assets/images/houseboat1.jpg" alt="Premium Houseboat" />
+              <div class="package-body">
+                <div class="package-topline">
+                  <span class="pill premium">Premium</span>
+                  <span class="rating">★ 4.9</span>
+                </div>
+                <h4>Premium Houseboat</h4>
+                <p>
+                  Ideal for families and couples seeking comfort, scenic views,
+                  and a relaxing Alleppey cruise.
+                </p>
+                <div class="package-meta">
+                  <span>1 Night</span>
+                  <span>From ₹6,999</span>
+                </div>
+                <a href="#booking" class="mini-btn">Book this stay</a>
+              </div>
+            </article>
+
+            <article class="package-card" data-category="luxury honeymoon">
+              <img src="assets/images/houseboat2.jpg" alt="Luxury Houseboat" />
+              <div class="package-body">
+                <div class="package-topline">
+                  <span class="pill luxury">Luxury</span>
+                  <span class="rating">★ 5.0</span>
+                </div>
+                <h4>Luxury Houseboat</h4>
+                <p>
+                  Spacious interiors, elegant décor, premium meals and a serene
+                  backwaters experience for special occasions.
+                </p>
+                <div class="package-meta">
+                  <span>2 Nights</span>
+                  <span>From ₹12,499</span>
+                </div>
+                <a href="#booking" class="mini-btn">Book this stay</a>
+              </div>
+            </article>
+
+            <article class="package-card" data-category="family premium">
+              <img src="assets/images/houseboat3.jpg" alt="Deluxe Houseboat" />
+              <div class="package-body">
+                <div class="package-topline">
+                  <span class="pill deluxe">Deluxe</span>
+                  <span class="rating">★ 4.8</span>
+                </div>
+                <h4>Deluxe Houseboat</h4>
+                <p>
+                  A budget-friendly option with warm hospitality, clean rooms and
+                  beautiful backwater views for every traveler.
+                </p>
+                <div class="package-meta">
+                  <span>1 Night</span>
+                  <span>From ₹4,999</span>
+                </div>
+                <a href="#booking" class="mini-btn">Book this stay</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="info-banner">
+          <div class="banner-card">
+            <div>
+              <span class="eyebrow dark">Travel promise</span>
+              <h3>Comfort, safety and scenic luxury</h3>
+            </div>
+            <ul>
+              <li>Clean and safe boat stays</li>
+              <li>Experienced crew support</li>
+              <li>Best rates guaranteed</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section-block" id="gallery">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow dark">Gallery</span>
+              <h3>Moments from the backwaters</h3>
+            </div>
+          </div>
+
+          <div class="gallery-grid">
+            <img src="assets/images/Image (7).jpg" alt="Houseboat interior" />
+            <img src="assets/images/Image (8).jpg" alt="Backwater sunset" />
+            <img src="assets/images/Image (9).jpg" alt="Boat cruise" />
+            <img src="assets/images/Image (13).jpg" alt="Travel experience" />
+            <img src="assets/images/Image (14).jpg" alt="Kerala coastline" />
+            <img src="assets/images/Image (15).jpg" alt="Waterfront stay" />
+          </div>
+        </section>
+
+        <section class="section-block booking-section" id="booking">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow dark">Quick booking</span>
+              <h3>Plan your getaway</h3>
+            </div>
+          </div>
+
+          <form class="booking-form" id="bookingForm">
+            <div class="input-row two-col">
+              <label>
+                Full name
+                <input type="text" placeholder="Your name" />
+              </label>
+              <label>
+                Phone
+                <input type="tel" placeholder="Mobile number" />
+              </label>
+            </div>
+
+            <div class="input-row two-col">
+              <label>
+                Package
+                <select>
+                  <option>Premium Houseboat</option>
+                  <option>Luxury Houseboat</option>
+                  <option>Deluxe Houseboat</option>
+                  <option>Custom Holiday Package</option>
+                </select>
+              </label>
+              <label>
+                Travel date
+                <input type="date" />
+              </label>
+            </div>
+
+            <div class="input-row two-col">
+              <label>
+                Guests
+                <select>
+                  <option>2 Guests</option>
+                  <option>4 Guests</option>
+                  <option>6 Guests</option>
+                  <option>Custom</option>
+                </select>
+              </label>
+              <label>
+                Budget
+                <select>
+                  <option>₹5k - ₹8k</option>
+                  <option>₹8k - ₹12k</option>
+                  <option>₹12k - ₹20k</option>
+                  <option>Custom</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Additional details
+              <textarea rows="4" placeholder="Tell us about your preferred stay, meals, or custom route..."></textarea>
+            </label>
+
+            <button class="primary-btn form-submit" type="submit">Send enquiry</button>
+          </form>
+        </section>
+
+        <section class="section-block" id="about">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow dark">Why choose us</span>
+              <h3>Trusted travel experience</h3>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <img src="assets/images/interior.jpg" alt="Houseboat interior" />
+            <div class="about-copy">
+              <p>
+                We bring a premium and reliable way to explore the enchanting
+                backwaters of Kerala. Every stay is crafted around comfort,
+                hospitality, and memorable family or couple experiences.
+              </p>
+              <ul>
+                <li>Professional service</li>
+                <li>Clean and safe boats</li>
+                <li>Experienced crew</li>
+                <li>Best tour value</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block reviews">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow dark">Reviews</span>
+              <h3>Guests love the experience</h3>
+            </div>
+          </div>
+
+          <div class="review-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “The stay felt luxurious and peaceful. The crew was kind and the
+                food was excellent.”
+              </p>
+              <strong>— Meera & Arjun</strong>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                “Perfect family trip with scenic views and amazing hospitality.
+                Very easy to book.”
+              </p>
+              <strong>— Rahul S.</strong>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <span class="brand-mark small">V</span>
+          <div>
+            <strong>Vaishnav Tours</strong>
+            <small>Kerala Houseboat Stays</small>
+          </div>
         </div>
-    </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="why-us">
-        <h2 class="section-title">Why Choose Us</h2>
-
-        <div class="why-us-list">
-            <div class="why-us-item">✔ Professional Service</div>
-            <div class="why-us-item">✔ Clean & Safe Boats</div>
-            <div class="why-us-item">✔ Experienced Crew</div>
-            <div class="why-us-item">✔ Best Rates Guaranteed</div>
+        <div class="footer-actions">
+          <a href="tel:+919995954739">Call</a>
+          <a href="https://wa.me/00919995954739" target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
-    </section>
+      </footer>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2024 Vaishnav Tours & Travels – Kerala Houseboat Stays</p>
-    </footer>
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2024 Vaishnav Tours & Travels – Kerala Houseboat Stays</p>
-    </footer>
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <a class="nav-item active" href="#home">Home</a>
+        <a class="nav-item" href="#packages">Packages</a>
+        <a class="nav-item" href="#booking">Book</a>
+        <a class="nav-item" href="#gallery">Gallery</a>
+        <a class="nav-item" href="#about">About</a>
+      </nav>
+    </div>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/00919995954739" class="whatsapp-float" target="_blank">
-        🟢
-    </a>
-
-</body>
-</html>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
