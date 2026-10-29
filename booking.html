@@ -103,7 +103,7 @@
         <p>© 2024 Vaishnav Tours & Travels – Kerala Houseboat Stays</p>
     </footer>
 
-  <!-- WhatsApp Floating Button -->
+ <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/919995954739"
    class="whatsapp-float"
    target="_blank"
@@ -111,53 +111,61 @@
     🟢
 </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-        const supabaseUrl = 'https://gdrldlecacrkmpqorhcp.supabase.co';
-        const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdkcmxkbGVjYWNya21wcW9yaGNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI4NDI4MzMsImV4cCI6MjEwODQxODgzM30.ZA2x_am_2ddfnxnI8p73CUGvD0miSghkLVNuWssYIKA';
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-        const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
+<script>
+    const supabaseUrl = 'https://gdrldlecacrkmpqorhcp.supabase.co';
 
-        const bookingForm = document.getElementById('bookingForm');
-        const submitButton = document.getElementById('submitButton');
+    const supabaseAnonKey = 'PASTE_YOUR_EXISTING_ANON_KEY_HERE';
 
-        bookingForm.addEventListener('submit', async function (event) {
-            event.preventDefault();
+    const supabase = window.supabase.createClient(
+        supabaseUrl,
+        supabaseAnonKey
+    );
 
-            const formData = {
-                name: document.getElementById('name').value.trim(),
-                phone: document.getElementById('phone').value.trim(),
-                booking_date: document.getElementById('date').value,
-                package: document.getElementById('package').value,
-                message: document.getElementById('message').value.trim()
-            };
+    const bookingForm = document.getElementById('bookingForm');
+    const submitButton = document.getElementById('submitButton');
 
-            if (!formData.name || !formData.phone || !formData.booking_date || !formData.package) {
-                alert('Please fill in all required fields.');
-                return;
-            }
+    bookingForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
 
-            submitButton.disabled = true;
-            submitButton.textContent = 'Submitting...';
+        const formData = {
+            name: document.getElementById('name').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            booking_date: document.getElementById('date').value,
+            package: document.getElementById('package').value,
+            message: document.getElementById('message').value.trim()
+        };
 
-            const { data, error } = await supabase
-                .from('enquiries')
-                .insert([formData]);
+        if (
+            !formData.name ||
+            !formData.phone ||
+            !formData.booking_date ||
+            !formData.package
+        ) {
+            alert('Please fill in all required fields.');
+            return;
+        }
 
-            if (error) {
-                console.error('Supabase insert error:', error);
-                alert('Booking failed. Please try again or contact support.');
-                submitButton.disabled = false;
-                submitButton.textContent = 'Submit Booking';
-                return;
-            }
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting...';
 
-            alert('Your booking request has been submitted successfully!');
-            bookingForm.reset();
+        const { error } = await supabase
+            .from('enquiries')
+            .insert([formData]);
+
+        if (error) {
+            console.error('Supabase insert error:', error);
+            alert('Booking failed. Please try again.');
             submitButton.disabled = false;
             submitButton.textContent = 'Submit Booking';
-        });
-    </script>
+            return;
+        }
 
-</body>
-</html>
+        alert('Your booking request has been submitted successfully!');
+
+        bookingForm.reset();
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit Booking';
+    });
+</script>
