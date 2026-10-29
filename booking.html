@@ -119,10 +119,10 @@
 
     const supabaseAnonKey = 'sb_publishable_ADbNoL-EOSd52Nui570phA_kfhF9Xnb';
 
-    const supabase = window.supabase.createClient(
-        supabaseUrl,
-        supabaseAnonKey
-    );
+const supabaseClient = window.supabase.createClient(
+    supabaseUrl,
+    supabaseAnonKey
+);
 
     const bookingForm = document.getElementById('bookingForm');
     const submitButton = document.getElementById('submitButton');
@@ -151,9 +151,9 @@
         submitButton.disabled = true;
         submitButton.textContent = 'Submitting...';
 
-        const { error } = await supabase
-            .from('enquiries')
-            .insert([formData]);
+const { error } = await supabaseClient
+    .from('enquiries')
+    .insert([formData]);
 
         if (error) {
             console.error('Supabase insert error:', error);
