@@ -131,12 +131,15 @@
         event.preventDefault();
 
         const formData = {
-            name: document.getElementById('name').value.trim(),
-            phone: document.getElementById('phone').value.trim(),
-            booking_date: document.getElementById('date').value,
-            package: document.getElementById('package').value,
-            message: document.getElementById('message').value.trim()
-        };
+    Name: document.getElementById('name').value.trim(),
+    Phone: document.getElementById('phone').value.trim(),
+    Date: document.getElementById('date').value,
+    Message:
+        'Package: ' +
+        document.getElementById('package').value +
+        ' | Notes: ' +
+        document.getElementById('message').value.trim()
+};
 
         if (
             !formData.name ||
