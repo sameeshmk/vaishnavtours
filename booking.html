@@ -151,8 +151,8 @@
         submitButton.disabled = true;
         submitButton.textContent = 'Submitting...';
 
-const { error } = await supabaseClient
-    .from('enquiries')
+    const { error } = await supabaseClient
+    .from('Enquiries')
     .insert([formData]);
 
         if (error) {
