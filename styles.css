@@ -721,3 +721,49 @@ input:focus, select:focus, textarea:focus {
     grid-template-columns: 1fr;
   }
 }
+
+/* Booking form dropdown visibility fix */
+.booking-form select {
+    background-color: #151c22;
+    color: #ffffff;
+    border: 1px solid #39434d;
+}
+
+/* Dropdown options */
+.booking-form select option {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+/* Empty / placeholder option */
+.booking-form select option[value=""] {
+    color: #555555;
+}
+
+/* Form inputs */
+.booking-form input,
+.booking-form textarea {
+    background-color: #151c22;
+    color: #ffffff;
+    border: 1px solid #39434d;
+}
+
+/* Placeholder text */
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+    color: #a8afb7;
+    opacity: 1;
+}
+
+/* Form labels */
+.booking-form label {
+    color: #ffffff;
+}
+
+/* Note below button */
+.form-note {
+    color: #c7cbd1;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 12px;
+}
