@@ -16,7 +16,7 @@
 
   <meta
     name="description"
-    content="Explore Alleppey houseboat booking options with Vaishnav Tours & Travels. Premium, Deluxe, Luxury, Honeymoon and Family houseboat stays in Kerala. Check availability online."
+    content="Explore Alleppey houseboat booking options with Vaishnav Tours & Travels. Check Premium, Deluxe, Luxury, Honeymoon and Family houseboat availability in Kerala."
   />
 
   <meta
@@ -67,6 +67,11 @@
     content="https://vaishnavtours.com/assets/images/hero.jpg"
   />
 
+  <meta
+    property="og:site_name"
+    content="Vaishnav Tours & Travels"
+  />
+
 
   <!-- GOOGLE ADS BASE TAG -->
 
@@ -76,27 +81,24 @@
   </script>
 
   <script>
-
-    window.dataLayer =
-      window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
     function gtag() {
       dataLayer.push(arguments);
     }
 
     gtag('js', new Date());
-
-    gtag(
-      'config',
-      'AW-18555545655'
-    );
-
+    gtag('config', 'AW-18555545655');
   </script>
 
 
-  <!-- PAGE STYLES -->
+  <!-- PAGE-SPECIFIC STYLING -->
 
   <style>
+
+    .seo-page-shell {
+      display: block;
+    }
 
     .seo-hero {
       position: relative;
@@ -105,6 +107,7 @@
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 28px;
+      background: #0d1419;
     }
 
     .seo-hero img {
@@ -122,7 +125,7 @@
         linear-gradient(
           180deg,
           rgba(7, 11, 16, 0.05),
-          rgba(7, 11, 16, 0.9)
+          rgba(7, 11, 16, 0.92)
         );
     }
 
@@ -135,32 +138,44 @@
     }
 
     .seo-hero-content h1 {
-      max-width: 390px;
+      max-width: 400px;
       margin: 10px 0 12px;
-      font-size:
-        clamp(2.1rem, 7vw, 3.2rem);
+      font-size: clamp(2.1rem, 7vw, 3.2rem);
       line-height: 1.05;
     }
 
     .seo-hero-content p {
-      max-width: 390px;
-      color: rgba(255,255,255,0.92);
-      line-height: 1.65;
+      max-width: 400px;
       margin-bottom: 20px;
+      color: rgba(255, 255, 255, 0.92);
+      line-height: 1.65;
+    }
+
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 16px 2px 8px;
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    .breadcrumb a {
+      color: var(--gold-soft);
+      text-decoration: none;
     }
 
     .content-card {
       padding: 20px 18px;
       border: 1px solid var(--line);
       border-radius: 22px;
-      background:
-        rgba(17, 24, 31, 0.78);
+      background: rgba(17, 24, 31, 0.78);
     }
 
     .content-card h2 {
-      margin-bottom: 12px;
-      font-size:
-        clamp(1.5rem, 5vw, 2.1rem);
+      margin: 8px 0 12px;
+      font-size: clamp(1.5rem, 5vw, 2.1rem);
+      line-height: 1.18;
     }
 
     .content-card p {
@@ -174,8 +189,7 @@
 
     .feature-grid {
       display: grid;
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
     }
 
@@ -183,20 +197,19 @@
       padding: 17px 15px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      background:
-        rgba(17, 24, 31, 0.78);
+      background: rgba(17, 24, 31, 0.78);
     }
 
     .feature-item strong {
       display: block;
-      color: var(--gold-soft);
       margin-bottom: 7px;
+      color: var(--gold-soft);
     }
 
     .feature-item p {
       color: var(--muted);
-      line-height: 1.55;
       font-size: 0.85rem;
+      line-height: 1.55;
     }
 
     .seo-package-grid {
@@ -227,7 +240,7 @@
     }
 
     .seo-package-body h3 {
-      margin: 10px 0;
+      margin: 12px 0 9px;
       font-size: 1.45rem;
     }
 
@@ -240,6 +253,7 @@
       display: grid;
       gap: 7px;
       margin: 16px 0;
+      padding: 0;
       list-style: none;
       color: var(--muted);
       font-size: 0.86rem;
@@ -250,6 +264,21 @@
       margin-right: 8px;
       color: var(--gold-soft);
       font-weight: 700;
+    }
+
+    .starting-price {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--text);
+      font-size: 0.84rem;
+    }
+
+    .starting-price strong {
+      color: var(--gold-soft);
     }
 
     .itinerary {
@@ -265,8 +294,7 @@
       padding: 15px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      background:
-        rgba(17, 24, 31, 0.73);
+      background: rgba(17, 24, 31, 0.73);
     }
 
     .step-number {
@@ -276,8 +304,7 @@
       width: 42px;
       height: 42px;
       border-radius: 14px;
-      background:
-        rgba(216, 176, 107, 0.14);
+      background: rgba(216, 176, 107, 0.14);
       color: var(--gold-soft);
       font-weight: 800;
     }
@@ -289,8 +316,8 @@
 
     .itinerary-step p {
       color: var(--muted);
-      line-height: 1.55;
       font-size: 0.86rem;
+      line-height: 1.55;
     }
 
     .booking-guide {
@@ -300,23 +327,21 @@
 
     .guide-row {
       padding: 16px;
-      border-left:
-        3px solid var(--gold);
+      border-left: 3px solid var(--gold);
       border-radius: 0 14px 14px 0;
-      background:
-        rgba(216, 176, 107, 0.06);
+      background: rgba(216, 176, 107, 0.06);
     }
 
     .guide-row strong {
       display: block;
-      color: var(--gold-soft);
       margin-bottom: 5px;
+      color: var(--gold-soft);
     }
 
     .guide-row p {
       color: var(--muted);
-      line-height: 1.55;
       font-size: 0.87rem;
+      line-height: 1.55;
     }
 
     .faq-list {
@@ -328,21 +353,20 @@
       padding: 17px 16px;
       border: 1px solid var(--line);
       border-radius: 18px;
-      background:
-        rgba(17, 24, 31, 0.76);
+      background: rgba(17, 24, 31, 0.76);
     }
 
     .faq-card h3 {
-      color: var(--gold-soft);
       margin-bottom: 8px;
+      color: var(--gold-soft);
       font-size: 1rem;
       line-height: 1.4;
     }
 
     .faq-card p {
       color: var(--muted);
-      line-height: 1.65;
       font-size: 0.88rem;
+      line-height: 1.65;
     }
 
     .seo-cta {
@@ -351,21 +375,13 @@
       margin-top: 28px;
       padding: 24px 18px;
       text-align: center;
+      border: 1px solid rgba(216, 176, 107, 0.4);
       border-radius: 24px;
-      border:
-        1px solid rgba(
-          216,
-          176,
-          107,
-          0.4
-        );
-      background:
-        rgba(216, 176, 107, 0.08);
+      background: rgba(216, 176, 107, 0.08);
     }
 
     .seo-cta h2 {
-      font-size:
-        clamp(1.45rem, 5vw, 2rem);
+      font-size: clamp(1.45rem, 5vw, 2rem);
     }
 
     .seo-cta p {
@@ -380,20 +396,6 @@
       gap: 10px;
     }
 
-    .breadcrumb {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin: 16px 2px 4px;
-      color: var(--muted);
-      font-size: 0.76rem;
-    }
-
-    .breadcrumb a {
-      color: var(--gold-soft);
-      text-decoration: none;
-    }
-
     @media (max-width: 420px) {
 
       .feature-grid {
@@ -403,6 +405,12 @@
       .seo-hero,
       .seo-hero img {
         min-height: 430px;
+      }
+
+      .seo-hero-content {
+        left: 18px;
+        right: 18px;
+        bottom: 22px;
       }
 
     }
@@ -417,7 +425,7 @@
   <div class="page-bg"></div>
 
 
-  <div class="app-shell">
+  <div class="app-shell seo-page-shell">
 
 
     <!-- HEADER -->
@@ -427,7 +435,7 @@
       <a
         href="index.html"
         class="brand-wrap"
-        style="text-decoration:none;color:inherit;"
+        style="text-decoration: none; color: inherit;"
         aria-label="Vaishnav Tours home">
 
         <div
@@ -442,15 +450,16 @@
             Vaishnav
           </span>
 
-          <h2
+          <p
             style="
-              font-size:1.2rem;
-              line-height:1.05;
-              letter-spacing:.08em;
-              text-transform:uppercase;
+              font-size: 1.2rem;
+              font-weight: 700;
+              line-height: 1.05;
+              letter-spacing: 0.08em;
+              text-transform: uppercase;
             ">
             Tours
-          </h2>
+          </p>
 
         </div>
 
@@ -464,3 +473,929 @@
           href="tel:+919995954739"
           aria-label="Call Vaishnav Tours">
           ☎
+        </a>
+
+        <a
+          class="icon-btn whatsapp"
+          href="https://wa.me/919995954739"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with Vaishnav Tours on WhatsApp">
+          ✆
+        </a>
+
+      </div>
+
+    </header>
+
+
+    <main class="content">
+
+
+      <!-- BREADCRUMB -->
+
+      <nav
+        class="breadcrumb"
+        aria-label="Breadcrumb">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <span aria-hidden="true">›</span>
+
+        <span>
+          Alleppey Houseboat Booking
+        </span>
+
+      </nav>
+
+
+      <!-- HERO -->
+
+      <section class="seo-hero">
+
+        <img
+          src="assets/images/hero.jpg"
+          alt="Traditional Alleppey houseboat cruising through the Kerala backwaters"
+          width="1024"
+          height="682"
+          fetchpriority="high"
+        />
+
+        <div class="seo-hero-overlay"></div>
+
+
+        <div class="seo-hero-content">
+
+          <span class="badge">
+            Kerala Backwater Stays
+          </span>
+
+          <h1>
+            Alleppey Houseboat Booking
+          </h1>
+
+          <p>
+            Explore Premium, Deluxe and Luxury houseboat stays
+            in Alleppey for couples, families and groups.
+            Check your preferred dates and available houseboat
+            options directly with Vaishnav Tours.
+          </p>
+
+
+          <div class="cta-row">
+
+            <a
+              class="primary-btn"
+              href="index.html#booking">
+              Check Availability
+            </a>
+
+            <a
+              class="secondary-btn"
+              href="https://wa.me/919995954739"
+              target="_blank"
+              rel="noopener noreferrer">
+              WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- INTRODUCTION -->
+
+      <section class="section-block">
+
+        <article class="content-card">
+
+          <span class="eyebrow dark">
+            Alleppey, Kerala
+          </span>
+
+          <h2>
+            Plan Your Kerala Backwater Houseboat Stay
+          </h2>
+
+          <p>
+            Alleppey, also known as Alappuzha, is one of Kerala's
+            best-known backwater destinations. Vaishnav Tours &amp;
+            Travels assists customers in finding suitable houseboat
+            options based on travel dates, number of nights, guests,
+            bedrooms and preferred category.
+          </p>
+
+          <p>
+            Choose from Premium, Deluxe, Luxury and Honeymoon
+            houseboats. Couples, families and larger groups can
+            submit their requirements online and receive available
+            options with a final quotation before booking.
+          </p>
+
+        </article>
+
+      </section>
+
+
+      <!-- CUSTOMER TYPES -->
+
+      <section class="section-block">
+
+        <div class="section-head">
+
+          <div>
+
+            <span class="eyebrow dark">
+              Booking Options
+            </span>
+
+            <h2>
+              Find the Right Alleppey Houseboat
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+          <article class="feature-item">
+
+            <strong>
+              Couples
+            </strong>
+
+            <p>
+              Private houseboat options for couples looking
+              for a peaceful Kerala backwater stay.
+            </p>
+
+          </article>
+
+
+          <article class="feature-item">
+
+            <strong>
+              Honeymoon Stays
+            </strong>
+
+            <p>
+              Request Luxury or Honeymoon houseboat options
+              for a private couple experience.
+            </p>
+
+          </article>
+
+
+          <article class="feature-item">
+
+            <strong>
+              Families
+            </strong>
+
+            <p>
+              Select suitable bedrooms based on the number
+              of adults and children travelling.
+            </p>
+
+          </article>
+
+
+          <article class="feature-item">
+
+            <strong>
+              Groups
+            </strong>
+
+            <p>
+              Larger groups can request multi-bedroom
+              houseboats subject to availability.
+            </p>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- HOUSEBOAT PACKAGES -->
+
+      <section
+        class="section-block"
+        id="packages">
+
+        <div class="section-head">
+
+          <div>
+
+            <span class="eyebrow dark">
+              Houseboat Categories
+            </span>
+
+            <h2>
+              Alleppey Houseboat Packages
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="seo-package-grid">
+
+
+          <!-- PREMIUM -->
+
+          <article class="seo-package">
+
+            <img
+              src="assets/images/houseboat1.jpg"
+              alt="Premium houseboat stay in Alleppey Kerala"
+              loading="lazy"
+            />
+
+            <div class="seo-package-body">
+
+              <span class="pill premium">
+                Premium
+              </span>
+
+              <h3>
+                Premium Houseboat
+              </h3>
+
+              <p>
+                A comfortable houseboat option for couples and
+                families seeking a relaxing Alleppey backwater stay.
+              </p>
+
+              <div class="starting-price">
+
+                <span>
+                  Starting indication
+                </span>
+
+                <strong>
+                  From ₹6,999
+                </strong>
+
+              </div>
+
+              <ul>
+                <li>Private bedroom options</li>
+                <li>Suitable for couples and families</li>
+                <li>Kerala backwater cruising</li>
+                <li>Date-specific availability</li>
+              </ul>
+
+              <a
+                href="index.html#booking"
+                class="mini-btn">
+                Check Premium Availability
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- LUXURY -->
+
+          <article class="seo-package">
+
+            <img
+              src="assets/images/houseboat2.jpg"
+              alt="Luxury Alleppey houseboat for honeymoon and family stays"
+              loading="lazy"
+            />
+
+            <div class="seo-package-body">
+
+              <span class="pill luxury">
+                Luxury
+              </span>
+
+              <h3>
+                Luxury Houseboat
+              </h3>
+
+              <p>
+                An upgraded option for customers seeking spacious
+                accommodation and a more premium backwater experience.
+              </p>
+
+              <div class="starting-price">
+
+                <span>
+                  Starting indication
+                </span>
+
+                <strong>
+                  From ₹12,499
+                </strong>
+
+              </div>
+
+              <ul>
+                <li>Upgraded houseboat accommodation</li>
+                <li>Suitable for special occasions</li>
+                <li>Honeymoon options available</li>
+                <li>Private booking assistance</li>
+              </ul>
+
+              <a
+                href="index.html#booking"
+                class="mini-btn">
+                Check Luxury Availability
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- DELUXE -->
+
+          <article class="seo-package">
+
+            <img
+              src="assets/images/houseboat3.jpg"
+              alt="Deluxe Alleppey houseboat package for families"
+              loading="lazy"
+            />
+
+            <div class="seo-package-body">
+
+              <span class="pill deluxe">
+                Deluxe
+              </span>
+
+              <h3>
+                Deluxe Houseboat
+              </h3>
+
+              <p>
+                A value-focused option for couples and small families
+                seeking comfortable accommodation and backwater views.
+              </p>
+
+              <div class="starting-price">
+
+                <span>
+                  Starting indication
+                </span>
+
+                <strong>
+                  From ₹4,999
+                </strong>
+
+              </div>
+
+              <ul>
+                <li>Value-focused houseboat stay</li>
+                <li>Comfortable accommodation</li>
+                <li>Backwater sightseeing experience</li>
+                <li>Suitable for small families</li>
+              </ul>
+
+              <a
+                href="index.html#booking"
+                class="mini-btn">
+                Check Deluxe Availability
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- BOOKING PROCESS -->
+
+      <section class="section-block">
+
+        <div class="section-head">
+
+          <div>
+
+            <span class="eyebrow dark">
+              Simple Enquiry Process
+            </span>
+
+            <h2>
+              How to Book an Alleppey Houseboat
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="itinerary">
+
+          <article class="itinerary-step">
+
+            <span class="step-number">
+              1
+            </span>
+
+            <div>
+
+              <h3>
+                Select your travel date
+              </h3>
+
+              <p>
+                Choose your preferred check-in date and
+                the number of nights required.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="itinerary-step">
+
+            <span class="step-number">
+              2
+            </span>
+
+            <div>
+
+              <h3>
+                Tell us your group size
+              </h3>
+
+              <p>
+                Enter the number of adults, children and
+                bedrooms required.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="itinerary-step">
+
+            <span class="step-number">
+              3
+            </span>
+
+            <div>
+
+              <h3>
+                Choose your houseboat category
+              </h3>
+
+              <p>
+                Select Premium, Deluxe, Luxury, Honeymoon
+                or ask Vaishnav Tours to recommend an option.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="itinerary-step">
+
+            <span class="step-number">
+              4
+            </span>
+
+            <div>
+
+              <h3>
+                Receive availability and quotation
+              </h3>
+
+              <p>
+                Vaishnav Tours will check suitable options
+                and contact you with availability and pricing.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- BOOKING INFORMATION -->
+
+      <section class="section-block">
+
+        <div class="section-head">
+
+          <div>
+
+            <span class="eyebrow dark">
+              Before You Book
+            </span>
+
+            <h2>
+              Important Houseboat Information
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="booking-guide">
+
+          <article class="guide-row">
+
+            <strong>
+              Availability
+            </strong>
+
+            <p>
+              Availability can vary according to travel date,
+              category, bedrooms and guest requirements.
+            </p>
+
+          </article>
+
+
+          <article class="guide-row">
+
+            <strong>
+              Pricing
+            </strong>
+
+            <p>
+              Prices displayed as “From” amounts are starting
+              indications. Final rates may vary according to
+              travel date, category, bedrooms and availability.
+            </p>
+
+          </article>
+
+
+          <article class="guide-row">
+
+            <strong>
+              Booking Confirmation
+            </strong>
+
+            <p>
+              A Check Availability enquiry does not confirm a
+              booking. Confirmation follows agreement of the
+              available option, final quotation and payment terms.
+            </p>
+
+          </article>
+
+
+          <article class="guide-row">
+
+            <strong>
+              Special Requirements
+            </strong>
+
+            <p>
+              Mention meal preferences, pickup, honeymoon
+              decoration, celebrations, sightseeing or other
+              requirements in the enquiry form.
+            </p>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- GALLERY -->
+
+      <section
+        class="section-block"
+        id="gallery">
+
+        <div class="section-head">
+
+          <div>
+
+            <span class="eyebrow dark">
+              Alleppey Backwaters
+            </span>
+
+            <h2>
+              Houseboat Experience Gallery
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <img
+            src="assets/images/Image (7).jpg"
+            alt="Bedroom accommodation inside an Alleppey houseboat"
+            loading="lazy"
+          />
+
+          <img
+            src="assets/images/Image (8).jpg"
+            alt="Sunset across the Alleppey Kerala backwaters"
+            loading="lazy"
+          />
+
+          <img
+            src="assets/images/Image (9).jpg"
+            alt="Houseboat cruising through the Alappuzha backwaters"
+            loading="lazy"
+          />
+
+          <img
+            src="assets/images/Image (13).jpg"
+            alt="Private Kerala backwater houseboat experience"
+            loading="lazy"
+          />
+
+          <img
+            src="assets/images/Image (14).jpg"
+            alt="Scenic Alleppey waterfront and backwater landscape"
+            loading="lazy"
+          />
+
+          <img
+            src="assets/images/Image (15).jpg"
+            alt="Relaxing waterfront houseboat stay in Alleppey"
+            loading="lazy"
+          />
+
+        </div>
+
+      </section>
+
+
+      <!-- FAQ -->
+
+      <section
+        class="section-block"
+        id="faq">
+
+        <div class="section-head">
+
+          <div>
+
+            <span class="eyebrow dark">
+              Frequently Asked Questions
+            </span>
+
+            <h2>
+              Alleppey Houseboat FAQs
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-list">
+
+          <article class="faq-card">
+
+            <h3>
+              How do I book an Alleppey houseboat?
+            </h3>
+
+            <p>
+              Use the Check Availability form to provide your date,
+              nights, guests, required bedrooms and preferred category.
+              Vaishnav Tours will check available options and pricing.
+            </p>
+
+          </article>
+
+
+          <article class="faq-card">
+
+            <h3>
+              Which houseboat categories can I request?
+            </h3>
+
+            <p>
+              Premium, Deluxe, Luxury and Honeymoon houseboat
+              options can be requested, subject to availability.
+            </p>
+
+          </article>
+
+
+          <article class="faq-card">
+
+            <h3>
+              Can families book a private houseboat?
+            </h3>
+
+            <p>
+              Yes. Enter the number of adults, children and bedrooms
+              required so suitable private options can be checked.
+            </p>
+
+          </article>
+
+
+          <article class="faq-card">
+
+            <h3>
+              Can couples request honeymoon houseboats?
+            </h3>
+
+            <p>
+              Yes. Select Honeymoon Houseboat in the booking form
+              and include any decoration, meal or celebration
+              requirements under Special Requirements.
+            </p>
+
+          </article>
+
+
+          <article class="faq-card">
+
+            <h3>
+              Are the website prices final?
+            </h3>
+
+            <p>
+              Prices shown as “From” amounts are starting indications.
+              Final pricing depends on travel dates, category, bedrooms,
+              guests and availability.
+            </p>
+
+          </article>
+
+
+          <article class="faq-card">
+
+            <h3>
+              Does an availability request confirm my booking?
+            </h3>
+
+            <p>
+              No. The form is an enquiry. Vaishnav Tours will confirm
+              available options and the final quotation before booking.
+            </p>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- FINAL CTA -->
+
+      <section class="seo-cta">
+
+        <span class="eyebrow dark">
+          Plan Your Backwater Stay
+        </span>
+
+        <h2>
+          Check Alleppey Houseboat Availability
+        </h2>
+
+        <p>
+          Send Vaishnav Tours your preferred dates, guests and
+          bedroom requirements to receive suitable houseboat options.
+        </p>
+
+
+        <div class="seo-cta-buttons">
+
+          <a
+            href="index.html#booking"
+            class="primary-btn">
+            Check Availability
+          </a>
+
+          <a
+            href="https://wa.me/919995954739"
+            class="secondary-btn"
+            target="_blank"
+            rel="noopener noreferrer">
+            WhatsApp Us
+          </a>
+
+        </div>
+
+      </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+      <div class="footer-brand">
+
+        <span
+          class="brand-mark small"
+          aria-hidden="true">
+          V
+        </span>
+
+        <div>
+
+          <strong>
+            Vaishnav Tours &amp; Travels
+          </strong>
+
+          <small>
+            Alleppey Houseboat Booking
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-actions">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="tel:+919995954739">
+          Call
+        </a>
+
+        <a
+          href="https://wa.me/919995954739"
+          target="_blank"
+          rel="noopener noreferrer">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </footer>
+
+
+    <!-- MOBILE NAVIGATION -->
+
+    <nav
+      class="bottom-nav"
+      aria-label="Main navigation">
+
+      <a
+        class="nav-item"
+        href="index.html">
+        Home
+      </a>
+
+      <a
+        class="nav-item active"
+        href="#">
+        Alleppey
+      </a>
+
+      <a
+        class="nav-item"
+        href="#packages">
+        Packages
+      </a>
+
+      <a
+        class="nav-item"
+        href="index.html#booking">
+        Book
+      </a>
+
+      <a
+        class="nav-item"
+        href="#faq">
+        FAQs
+      </a>
+
+    </nav>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
